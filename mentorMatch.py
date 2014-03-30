@@ -8,7 +8,7 @@
 # guaranteed a big. However, each potential big is not guaranteed to be matched 
 # with a little. The maximum number of persons that can be preffed is 10, and 
 # the minimum is 5. A form for creating the correctly formatted CSV can be found
-# at https://docs.google.com/forms/d/17Cu4RSMUK2A_UN2OvHcysxIlv4rwVuZw0dvVqd5csMI/viewform.
+# at https://docs.google.com/forms/d/17Cu4RSMUK2A_UN2OvHcysxIlv4rwVuZw0dvVqd5csMI/viewform
 
 # Bigs and littles are both stored as instances of a Person class.
 # Big and little objects are stored in two dictionaries respectively, so that
