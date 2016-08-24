@@ -1,0 +1,49 @@
+Stable Marraige Problem
+
+#define SIZE=25
+
+person (name,prefs[SIZE]=completed_list,match=SIZE+1,names_tried=0)
+  name is person's name
+  prefs is a list of names
+  match is initialized to zero, and set when possibly matched to the value of the person they're currently matched with
+    reset to zero if dumped (only for guys)
+  names_tried is a counter of women proposed to
+
+
+person array of women W[SIZE]
+person array of men M[SIZE]
+int w,m
+  location of temp people
+
+function value(person.prefs,person.name)
+  returns number(0,SIZE) where person.name is in person.prefs array
+
+function lookup(person array,person.prefs[specific name])
+  returns person from opposite array
+
+int j
+  counter of people who don't have matches at end of attempt
+int val
+  where guy i ranks for girl w
+
+do
+  for(i=0;i<SIZE;i++)
+    if(M[i].match==SIZE+1)
+      continue;
+    else
+      w=lookup(W,M[i].prefs[M[i].names_tried]);
+      val=value(W[w].prefs,M[i].name)
+      if(W[w].match<val)
+        j++
+        continue;
+      else if(W[w].match==SIZE+1)
+        M[i].match=M[i].names_tried
+        W[w].match=val
+      else
+        j++
+        m=lookup(M,W[w].match)
+        M[m].match=SIZE+1
+        M[m].names_tried++
+        W[w].match=val
+        M[i].match=M[i].names_tried
+while(j;j=0) 
